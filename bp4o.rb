@@ -15,7 +15,7 @@ class Bp4o < Formula
       BP4O Installed!
       Now add the following to your shell's rc file to setup BP4O on login
 
-      [ -f #{pkgshare}/init.#{init} ] && source #{pkgshare}/init.#{init}
+      [ -f /usr/local/share/bp4o/init.#{init} ] && source /usr/local/share/bp4o/init.#{init}
     EOS
   end
 end
