@@ -3,6 +3,7 @@ class Bp4o < Formula
   homepage "http://zachwhaleys.website/bp4o/"
   url "https://github.com/zachwhaley/bp4o/archive/v0.2.1.tar.gz"
   sha256 "0a04cb28e0f13d4a65eb47bdeeb272b43ce0f201365abb0ab6c2be73cf178a2f"
+  head "https://github.com/zachwhaley/bp4o.git"
 
   def install
     bin.install Dir["bin/*"]
