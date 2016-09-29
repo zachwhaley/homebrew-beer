@@ -1,8 +1,8 @@
 class Bp4o < Formula
   desc "Better P4 Output"
   homepage "http://zachwhaleys.website/bp4o/"
-  url "https://github.com/zachwhaley/bp4o/archive/v0.2.2.tar.gz"
-  sha256 "305379c8e5afd97924b91a17199f7fceec474448c59b44625532e9417e1d88b3"
+  url "https://github.com/zachwhaley/bp4o/archive/v0.3.0.tar.gz"
+  sha256 "33fea23ee1efb6ac5ca7d36aeb9ad41a2062014ac2ece8d4f61daba4e0235913"
   head "https://github.com/zachwhaley/bp4o.git"
 
   def install
