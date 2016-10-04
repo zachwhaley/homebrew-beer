@@ -1,8 +1,8 @@
 class P4Completion < Formula
   desc "P4 Bash Completion"
   head "https://github.com/zachwhaley/p4-completion.git"
-  url "https://github.com/zachwhaley/p4-completion/archive/v1.0.tar.gz"
-  sha256 "e64d54375bd021b19392b6065ceba31507f93686a8df0589e4071f424cad8579"
+  url "https://github.com/zachwhaley/p4-completion/archive/v1.1.tar.gz"
+  sha256 "5153ce475f314751548c8a44ed63d74d85a5b177fcd335fcd6d5e992169f963f"
   depends_on "bash-completion"
 
   def install
