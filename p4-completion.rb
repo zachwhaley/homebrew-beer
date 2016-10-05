@@ -6,6 +6,6 @@ class P4Completion < Formula
   depends_on "bash-completion"
 
   def install
-    FileUtils.install "p4-completion.sh", "#{etc}/bash_completion/p4", :mode => 0444
+    bash_completion.install "p4-completion.sh" => "p4"
   end
 end
