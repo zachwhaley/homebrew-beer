@@ -7,16 +7,19 @@ class Bp4o < Formula
 
   def install
     bin.install Dir["bin/*"]
-    pkgshare.install Dir["./bp4o.*"]
+    prefix+"etc/profile.d".install {"bp4o.bash" => "bp4o.sh"}
+    share+"zsh/site-functions".install {"bp4o.zsh" => "bp4o"}
   end
 
   def caveats
-    shell = File.basename(ENV["SHELL"])
-    init = <<-EOS.undent
-      Add the following to your .#{shell}rc file to setup BP4O:
+    if File.basename(ENV["SHELL"]) == "zsh"
+      init = <<-EOS.undent
+        Zsh users, add the following to your ~/.zshrc file:
 
-        [ -f /usr/local/share/bp4o/bp4o.#{shell} ] && source /usr/local/share/bp4o/bp4o.#{shell}
-    EOS
-    init
+          autoload -Uz bp4o
+          bp4o
+      EOS
+      init
+    end
   end
 end
