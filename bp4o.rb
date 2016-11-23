@@ -7,8 +7,8 @@ class Bp4o < Formula
 
   def install
     bin.install Dir["bin/*"]
-    prefix+"etc/profile.d".install {"bp4o.bash" => "bp4o.sh"}
-    share+"zsh/site-functions".install {"bp4o.zsh" => "bp4o"}
+    prefix+"etc/profile.d".install "bp4o.bash" => "bp4o.sh"
+    share+"zsh/site-functions".install "bp4o.zsh" => "bp4o"
   end
 
   def caveats
