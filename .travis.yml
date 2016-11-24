@@ -1,0 +1,11 @@
+os: osx
+
+before_install:
+  - brew update
+
+before_script:
+  - brew tap zachwhaley/beer
+  - brew install bp4o
+
+script:
+  - which p4-help
