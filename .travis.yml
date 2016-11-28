@@ -1,12 +1,13 @@
 os: osx
-language: ruby
 
 before_install:
+  - brew tap caskroom/cask
   - brew update
 
-before_script:
-  - brew tap zachwhaley/beer
-  - brew install bp4o
+install:
+  - brew cask install p4
+  - brew install fish
 
 script:
-  - which p4-help
+  - brew install ./bp4o.rb
+  - brew test ./bp4o.rb

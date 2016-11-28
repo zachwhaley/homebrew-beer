@@ -23,4 +23,19 @@ class Bp4o < Formula
       bp4o
     EOS
   end
+
+  test do
+    require 'mkmf'
+
+    # Test Bash
+    system "bash", "-c", ". #{prefix}/etc/profile.d/bp4o.sh && p4 help bp4o"
+
+    # Test Zsh
+    system "zsh", "-c", "autoload -Uz bp4o; bp4o && p4 help bp4o"
+
+    # Test Fish
+    if find_executable "fish"
+      system "fish", "-c", "p4 help bp4o"
+    end
+  end
 end
