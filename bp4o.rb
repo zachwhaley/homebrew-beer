@@ -12,15 +12,15 @@ class Bp4o < Formula
     (share/"fish/vendor_functions.d").install "bp4o.fish" => "p4.fish"
   end
 
-  def caveats
-    if File.basename(ENV["SHELL"]) == "zsh"
-      init = <<-EOS.undent
-        Zsh users, add the following to your ~/.zshrc file:
+  def caveats; <<-EOS.undent
+    Bash users, add the following to your ~/.bash_profile:
+      if [ -f $(brew --prefix)/etc/profile.d/bp4o.sh ]; then
+        . $(brew --prefix)/etc/profile.d/bp4o.sh
+      fi
 
-          autoload -Uz bp4o
-          bp4o
-      EOS
-      init
-    end
+    Zsh users, add the following to your ~/.zshrc:
+      autoload -Uz bp4o
+      bp4o
+    EOS
   end
 end
