@@ -2,8 +2,8 @@ class Bp4o < Formula
   desc "Better P4 Output"
   homepage "http://zachwhaleys.website/bp4o/"
   head "https://github.com/zachwhaley/bp4o.git"
-  url "https://github.com/zachwhaley/bp4o/archive/v0.4.1.tar.gz"
-  sha256 "53ecf595ba5f50a94aaab4eda4af93baa0721b407b77b9799b34e9ec603bb3bf"
+  url "https://github.com/zachwhaley/bp4o/archive/v1.0.0.tar.gz"
+  sha256 "13255e5a47e7fe3caa0d26fcf447e179420aa1def4e87201657a7ce845acdb51"
 
   def install
     bin.install Dir["bin/*"]
@@ -28,14 +28,14 @@ class Bp4o < Formula
     require 'mkmf'
 
     # Test Bash
-    system "bash", "-c", ". #{prefix}/etc/profile.d/bp4o.sh && p4 help bp4o"
+    system "bash", "-c", ". #{prefix}/etc/profile.d/bp4o.sh && LESS='+gq' p4 help bp4o"
 
     # Test Zsh
-    system "zsh", "-c", "autoload -Uz bp4o; bp4o && p4 help bp4o"
+    system "zsh", "-c", "autoload -Uz bp4o; bp4o && LESS='+gq' p4 help bp4o"
 
     # Test Fish
     if find_executable "fish"
-      system "fish", "-c", "p4 help bp4o"
+      system "fish", "-c", "set LESS +gq; p4 help bp4o"
     end
   end
 end
