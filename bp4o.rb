@@ -28,7 +28,7 @@ class Bp4o < Formula
     require 'mkmf'
 
     # Test Bash
-    system "bash", "-c", ". #{prefix}/etc/profile.d/bp4o.sh && LESS='+gq' p4 help bp4o"
+    system "bash", "-c", ". #{HOMEBREW_PREFIX}/etc/profile.d/bp4o.sh && LESS='+gq' p4 help bp4o"
 
     # Test Zsh
     system "zsh", "-c", "autoload -Uz bp4o; bp4o && LESS='+gq' p4 help bp4o"
