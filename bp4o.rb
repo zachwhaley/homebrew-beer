@@ -25,8 +25,6 @@ class Bp4o < Formula
   end
 
   test do
-    require 'mkmf'
-
     # Test Bash
     system "bash", "-c", ". #{HOMEBREW_PREFIX}/etc/profile.d/bp4o.sh && p4 help bp4o"
 
@@ -34,7 +32,7 @@ class Bp4o < Formula
     system "zsh", "-c", "autoload -Uz bp4o && bp4o && p4 help bp4o"
 
     # Test Fish
-    if find_executable "fish"
+    if which("fish")
       system "fish", "-c", "p4 help bp4o"
     end
   end
