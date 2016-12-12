@@ -11,5 +11,8 @@ install:
   - brew install homeshick
 
 script:
+  - brew --version
+  - brew update -v --force
+  - brew --version
   - brew install ./bp4o.rb
   - brew test ./bp4o.rb
