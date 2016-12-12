@@ -2,9 +2,7 @@ os: osx
 
 before_install:
   - brew tap caskroom/cask
-  - brew update
-  - brew update -v
-  - brew doctor
+  - brew update -v --force
 
 install:
   - brew cask install p4
