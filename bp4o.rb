@@ -8,8 +8,8 @@ class Bp4o < Formula
   def install
     bin.install Dir["bin/*"]
     (prefix/"etc/profile.d").install "bp4o.bash" => "bp4o.sh"
-    (share/"zsh/site-functions").install "bp4o.zsh" => "bp4o"
-    (share/"fish/vendor_functions.d").install "bp4o.fish" => "p4.fish"
+    zsh_function.install "bp4o.zsh" => "bp4o"
+    fish_function.install "bp4o.fish" => "p4.fish"
   end
 
   def caveats; <<-EOS.undent
