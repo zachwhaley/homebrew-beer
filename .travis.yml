@@ -8,6 +8,7 @@ before_install:
 install:
   - brew cask install p4
   - brew install fish
+  - brew install homeshick
 
 script:
   - brew install ./bp4o.rb
