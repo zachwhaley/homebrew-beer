@@ -2,14 +2,14 @@ class Bp4o < Formula
   desc "Better P4 Output"
   homepage "http://zachwhaleys.website/bp4o/"
   head "https://github.com/zachwhaley/bp4o.git"
-  url "https://github.com/zachwhaley/bp4o/archive/v1.0.0.tar.gz"
-  sha256 "13255e5a47e7fe3caa0d26fcf447e179420aa1def4e87201657a7ce845acdb51"
+  url "https://github.com/zachwhaley/bp4o/archive/v1.1.0.tar.gz"
+  sha256 "18e3880b1a3897a3b2a922faa4e78220505d659a7298a463087f0e9a5e25d756"
 
   def install
     bin.install Dir["bin/*"]
     (prefix/"etc/profile.d").install "bp4o.bash" => "bp4o.sh"
-    (share/"zsh/site-functions").install "bp4o.zsh" => "bp4o"
-    (share/"fish/vendor_functions.d").install "bp4o.fish" => "p4.fish"
+    zsh_function.install "bp4o.zsh" => "bp4o"
+    fish_function.install "bp4o.fish" => "p4.fish"
   end
 
   def caveats; <<-EOS.undent
