@@ -5,7 +5,7 @@ before_install:
   - brew update
 
 install:
-  - brew cask install p4
+  - brew cask install perforce
   - brew install fish
 
 script:
