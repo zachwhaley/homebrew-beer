@@ -12,15 +12,16 @@ class Bp4o < Formula
     fish_function.install "bp4o.fish" => "p4.fish"
   end
 
-  def caveats; <<-EOS.undent
-    Bash users, add the following to your ~/.bash_profile:
-      if [ -f $(brew --prefix)/etc/profile.d/bp4o.sh ]; then
-        . $(brew --prefix)/etc/profile.d/bp4o.sh
-      fi
+  def caveats
+    <<~EOS
+      Bash users, add the following to your ~/.bash_profile:
+        if [ -f $(brew --prefix)/etc/profile.d/bp4o.sh ]; then
+          . $(brew --prefix)/etc/profile.d/bp4o.sh
+        fi
 
-    Zsh users, add the following to your ~/.zshrc:
-      autoload -Uz bp4o
-      bp4o
+      Zsh users, add the following to your ~/.zshrc:
+        autoload -Uz bp4o
+        bp4o
     EOS
   end
 
