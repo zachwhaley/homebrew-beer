@@ -13,11 +13,11 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
+    - name: Set up Homebrew
+      uses: Homebrew/actions/setup-homebrew@master
     - name: Install dependencies
       run: |
-        brew tap homebrew/cask
-        brew update
-        brew install --cask perforce
+        brew install --cask p4
         brew install fish
     - name: Install BP4O
       run: |
