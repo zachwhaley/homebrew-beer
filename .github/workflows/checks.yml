@@ -17,7 +17,7 @@ jobs:
       run: |
         brew tap homebrew/cask
         brew update
-        brew cask install perforce
+        brew install --cask perforce
         brew install fish
     - name: Install BP4O
       run: |
