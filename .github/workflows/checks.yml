@@ -13,12 +13,10 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Tap brew cask
-      run: |
-        brew tap caskroom/cask
-        brew update
     - name: Install dependencies
       run: |
+        brew tap homebrew/cask
+        brew update
         brew cask install perforce
         brew install fish
     - name: Install BP4O
