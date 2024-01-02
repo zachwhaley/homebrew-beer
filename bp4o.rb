@@ -1,9 +1,9 @@
 class Bp4o < Formula
   desc "Better P4 Output"
-  homepage "http://zachwhaleys.website/bp4o/"
+  homepage "http://zachwhaley.github.io/bp4o/"
   head "https://github.com/zachwhaley/bp4o.git"
-  url "https://github.com/zachwhaley/bp4o/archive/v1.1.1.tar.gz"
-  sha256 "6fe706e17fac2ab8cea8d4e41714f5ce66683f9382ea92f1064c85ffb196db39"
+  url "https://github.com/zachwhaley/bp4o/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "0bc21430637485f92175618e6fd191d765103e34688138f2f3732e9fbb57b6b2"
 
   def install
     bin.install Dir["bin/*"]
